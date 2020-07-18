@@ -54,7 +54,7 @@ module.exports = {
     REPORTS_TASK:           '/reports/task_reports',
     REPORTS_TIME_ENTRY:     '/reports/time_entry_reports',
     REPORTS_TIME:           '/reports/time_reports',
-    REPORTS_TIME_COMPANY:          '/time_reports',
+    REPORTS_TIME_COMPANY:   '/time_reports',
     REPORTS_TIMESHEET:      '/timesheet_reports',
     SALARIES:               '/salaries',
     SEARCH:                 '/search',

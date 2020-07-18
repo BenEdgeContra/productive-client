@@ -3,7 +3,8 @@
   "keywords": [
     "Productive",
     "Productive.io",
-    "Productive.io API"
+    "Productive.io API",
+    "node"
   ],
   "homepage": "https://github.com/BenEdgeContra/productive-client",
   "bugs": "https://github.com/BenEdgeContra/productive-client/issues",

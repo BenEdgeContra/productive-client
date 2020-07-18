@@ -12,6 +12,18 @@ or
 $ npm install --save productive-client
 ```
 
+## Contents
+- [Instantiate client](#Instantiate-client)
+- [Example (async get)](#example-async-get)
+- [Example (async create)](#Example-async-create)
+- [Example (async update)](#Example-async-update)
+- [Other examples (promise, filtering, sorting,)](#Other-examples)
+- [Response object](#Response-object)
+  - [Relationships](#Relationships)
+- [Entity API's](#Entity-APIs)
+
+
+
 ## Instantiate client
 ```
 const ProductiveClient = require('productive-client');
@@ -117,6 +129,7 @@ try {
     throw err;
 }
 ```
+## Other examples
 
 ### Promise based
 Each API returns a promise so you can use promises if you prefer.
@@ -674,7 +687,6 @@ productive.tasks.archive(id);
 productive.tasks.restore(id);
 ```
 ### `timeEntries`
-TODO: add get helpers
 See https://developer.productive.io/#time-entries for params (filter, sort, page) and data structure.
 ```
 productive.timeEntries.getById(id);

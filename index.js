@@ -400,7 +400,6 @@ module.exports = class ProductiveClient {
         return new CrudApi(this, apiPaths.PRICES);
     }
 
-
     /**
      * A collection of methods related to Projects.
      *
