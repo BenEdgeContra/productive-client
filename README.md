@@ -373,11 +373,11 @@ productive.dashboards.widgets.remove(id);
 ### `deals`
 See https://developer.productive.io/#deals for params (filter, sort, page) and data structure.
 ```
-productive.dashboards.deals.getById(id);
-productive.dashboards.deals.get(uriParams);
-productive.dashboards.deals.create(data);
-productive.dashboards.deals.update(id, data);
-productive.dashboards.deals.remove(id);
+productive.deals.getById(id);
+productive.deals.get(uriParams);
+productive.deals.create(data);
+productive.deals.update(id, data);
+productive.deals.remove(id);
 ```
 
 ### `deals.statuses`
