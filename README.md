@@ -373,11 +373,11 @@ productive.dashboards.widgets.remove(id);
 ### `deals`
 See https://developer.productive.io/#deals for params (filter, sort, page) and data structure.
 ```
-productive.dashboards.widgets.getById(id);
-productive.dashboards.widgets.get(uriParams);
-productive.dashboards.widgets.create(data);
-productive.dashboards.widgets.update(id, data);
-productive.dashboards.widgets.remove(id);
+productive.dashboards.deals.getById(id);
+productive.dashboards.deals.get(uriParams);
+productive.dashboards.deals.create(data);
+productive.dashboards.deals.update(id, data);
+productive.dashboards.deals.remove(id);
 ```
 
 ### `deals.statuses`
@@ -648,11 +648,11 @@ productive.search.get(uriParams);
 ### `services`
 See https://developer.productive.io/#services for params (filter, sort, page) and data structure.
 ```
-productive.search.getById(id);
-productive.search.get(uriParams);
-productive.search.create(data);
-productive.search.update(id, data);
-productive.search.remove(id);
+productive.services.getById(id);
+productive.services.get(uriParams);
+productive.services.create(data);
+productive.services.update(id, data);
+productive.services.remove(id);
 ```
 
 ### `services.types`
