@@ -20,6 +20,7 @@ $ npm install --save productive-client
 - [Other examples (promise, filtering, sorting,)](#other-examples)
 - [Response object](#response-object)
   - [Relationships](#relationships)
+  - [Example - get time entries for a person](#getRelationindex-full-example)
 - [Entity API's](#entity-apis)
 
 
