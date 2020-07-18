@@ -13,13 +13,13 @@ $ npm install --save productive-client
 ```
 
 ## Contents
-- [Instantiate client](#Instantiate-client)
+- [Instantiate client](#instantiate-client)
 - [Example (async get)](#example-async-get)
 - [Example (async create)](#example-async-create)
 - [Example (async update)](#example-async-update)
 - [Other examples (promise, filtering, sorting,)](#ether-examples)
-- [Response object](#eesponse-object)
-  - [Relationships](#eelationships)
+- [Response object](#response-object)
+  - [Relationships](#relationships)
 - [Entity API's](#entity-apis)
 
 
