@@ -260,7 +260,7 @@ See https://developer.productive.io/#attachments for params (filter, sort, page)
 ```
 productive.attachments.getById(id);
 productive.attachments.get(uriParams);
-productive.attachments.create(data);
+productive.attachments.create(uriParams, data);
 productive.attachments.update(id, uriParams);
 productive.attachments.remove(id);
 ```
@@ -269,7 +269,7 @@ See https://developer.productive.io/#boards for params (filter, sort, page) and 
 ```
 productive.boards.getById(id);
 productive.boards.get(uriParams);
-productive.boards.create(data);
+productive.boards.create(uriParams, data);
 productive.boards.update(id, uriParams);
 productive.boards.archive(id);
 productive.boards.restore(id);
@@ -279,7 +279,7 @@ See https://developer.productive.io/#task-lists for params (filter, sort, page) 
 ```
 productive.boards.taskLists.getById(id);
 productive.boards.taskLists.get(uriParams);
-productive.boards.taskLists.create(data);
+productive.boards.taskLists.create(uriParams, data);
 productive.boards.taskLists.update(id, data);
 productive.boards.taskLists.remove(id);
 ```
@@ -288,7 +288,7 @@ See https://developer.productive.io/#bookings for params (filter, sort, page) an
 ```
 productive.bookings.getById(id);
 productive.bookings.get(uriParams);
-productive.bookings.create(data);
+productive.bookings.create(uriParams, data);
 productive.bookings.update(id, uriParams);
 productive.bookings.remove(id);
 productive.bookings.approve(id);
@@ -298,7 +298,7 @@ productive.bookings.unapprove(id);
 See https://developer.productive.io/#comments for params (filter, sort, page) and data structure.
 ```
 productive.comments.getById(id);
-productive.comments.create(data);
+productive.comments.create(uriParams, data);
 productive.comments.update(id, uriParams);
 productive.comments.remove(id);
 productive.comments.pin(id);
@@ -309,7 +309,7 @@ See https://developer.productive.io/#companies for params (filter, sort, page) a
 ```
 productive.companies.getById(id);
 productive.companies.get(uriParams);
-productive.companies.create(data);
+productive.companies.create(uriParams, data);
 productive.companies.update(id, uriParams);
 productive.companies.archive(id);
 productive.companies.restore(id);
@@ -319,7 +319,7 @@ See https://developer.productive.io/#contact-entries for params (filter, sort, p
 ```
 productive.contactEntries.getById(id);
 productive.contactEntries.get(uriParams);
-productive.contactEntries.create(data);
+productive.contactEntries.create(uriParams, data);
 productive.contactEntries.update(id, data);
 productive.contactEntries.remove(id);
 ```
@@ -328,7 +328,7 @@ See https://developer.productive.io/#contracts for params (filter, sort, page) a
 ```
 productive.contracts.getById(id);
 productive.contracts.get(uriParams);
-productive.contracts.create(data);
+productive.contracts.create(uriParams, data);
 productive.contracts.update(id, data);
 ```
 ### `customFields`
@@ -336,7 +336,7 @@ See https://developer.productive.io/#custom-fields for params (filter, sort, pag
 ```
 productive.customFields.getById(id);
 productive.customFields.get(uriParams);
-productive.customFields.create(data);
+productive.customFields.create(uriParams, data);
 productive.customFields.update(id, data);
 productive.customFields.archive(id);
 ```
@@ -345,7 +345,7 @@ See https://developer.productive.io/#custom-field-options for params (filter, so
 ```
 productive.customFields.options.getById(id);
 productive.customFields.options.get(uriParams);
-productive.customFields.options.create(data);
+productive.customFields.options.create(uriParams, data);
 productive.customFields.options.update(id, data);
 productive.customFields.options.archive(id);
 ```
@@ -355,7 +355,7 @@ See https://developer.productive.io/#dashboards for params (filter, sort, page) 
 ```
 productive.dashboards.getById(id);
 productive.dashboards.get(uriParams);
-productive.dashboards.create(data);
+productive.dashboards.create(uriParams, data);
 productive.dashboards.update(id, data);
 productive.dashboards.remove(id);
 ```
@@ -365,7 +365,7 @@ See https://developer.productive.io/#widgets for params (filter, sort, page) and
 ```
 productive.dashboards.widgets.getById(id);
 productive.dashboards.widgets.get(uriParams);
-productive.dashboards.widgets.create(data);
+productive.dashboards.widgets.create(uriParams, data);
 productive.dashboards.widgets.update(id, data);
 productive.dashboards.widgets.remove(id);
 ```
@@ -375,7 +375,7 @@ See https://developer.productive.io/#deals for params (filter, sort, page) and d
 ```
 productive.deals.getById(id);
 productive.deals.get(uriParams);
-productive.deals.create(data);
+productive.deals.create(uriParams, data);
 productive.deals.update(id, data);
 productive.deals.remove(id);
 ```
@@ -385,7 +385,7 @@ See https://developer.productive.io/#deal-statuses for params (filter, sort, pag
 ```
 productive.deals.statuses.getById(id);
 productive.deals.statuses.get(uriParams);
-productive.deals.statuses.create(data);
+productive.deals.statuses.create(uriParams, data);
 productive.deals.statuses.update(id, data);
 productive.deals.statuses.remove(id);
 ```
@@ -394,7 +394,7 @@ See https://developer.productive.io/#lost-reasons for params (filter, sort, page
 ```
 productive.deals.lostReasons.getById(id);
 productive.deals.lostReasons.get(uriParams);
-productive.deals.lostReasons.create(data);
+productive.deals.lostReasons.create(uriParams, data);
 productive.deals.lostReasons.update(id, data);
 productive.deals.lostReasons.remove(id);
 ```
@@ -404,7 +404,7 @@ See https://developer.productive.io/#document-types for params (filter, sort, pa
 ```
 productive.documentTypes.getById(id);
 productive.documentTypes.get(uriParams);
-productive.documentTypes.create(data);
+productive.documentTypes.create(uriParams, data);
 productive.documentTypes.update(id, data);
 productive.documentTypes.remove(id);
 
@@ -424,7 +424,7 @@ See https://developer.productive.io/#events for params (filter, sort, page) and 
 ```
 productive.events.getById(id);
 productive.events.get(uriParams);
-productive.events.create(data);
+productive.events.create(uriParams, data);
 productive.events.update(id, data);
 productive.events.remove(id);
 ```
@@ -433,7 +433,7 @@ See https://developer.productive.io/#expenses for params (filter, sort, page) an
 ```
 productive.expenses.getById(id);
 productive.expenses.get(uriParams);
-productive.expenses.create(data);
+productive.expenses.create(uriParams, data);
 productive.expenses.update(id, data);
 productive.expenses.remove(id);
 productive.expenses.approve(id);
@@ -445,7 +445,7 @@ See https://developer.productive.io/#filters for params (filter, sort, page) and
 ```
 productive.filters.getById(id);
 productive.filters.get(uriParams);
-productive.filters.create(data);
+productive.filters.create(uriParams, data);
 productive.filters.update(id, data);
 productive.filters.remove(id);
 ```
@@ -455,7 +455,7 @@ See https://developer.productive.io/#holidays for params (filter, sort, page) an
 ```
 productive.holidays.getById(id);
 productive.holidays.get(uriParams);
-productive.holidays.create(data);
+productive.holidays.create(uriParams, data);
 productive.holidays.update(id, data);
 productive.holidays.remove(id);
 ```
@@ -464,7 +464,7 @@ See https://developer.productive.io/#imports for params (filter, sort, page) and
 ```
 productive.imports.getById(id);
 productive.imports.get(uriParams);
-productive.imports.create(data);
+productive.imports.create(uriParams, data);
 productive.imports.update(id, data);
 productive.imports.import(id);
 productive.imports.revert(id);
@@ -475,7 +475,7 @@ productive.imports.revert(id);
 See https://developer.productive.io/#invitations for params (filter, sort, page) and data structure.
 ```
 productive.invitations.getById(id);
-productive.invitations.create(data);
+productive.invitations.create(uriParams, data);
 productive.invitations.update(id, data);
 ```
 ### `invoices`
@@ -483,7 +483,7 @@ See https://developer.productive.io/#invoices for params (filter, sort, page) an
 ```
 productive.invoices.getById(id);
 productive.invoices.get(uriParams);
-productive.invoices.create(data);
+productive.invoices.create(uriParams, data);
 productive.invoices.update(id, data);
 productive.invoices.remove(id);
 productive.invoices.send(id, data);
@@ -494,7 +494,7 @@ See https://developer.productive.io/#invoices-lines for params (filter, sort, pa
 ```
 productive.invoices.lines.getById(id);
 productive.invoices.lines.get(uriParams);
-productive.invoices.lines.create(data);
+productive.invoices.lines.create(uriParams, data);
 productive.invoices.lines.update(id, data);
 productive.invoices.lines.remove(id);
 ```
@@ -504,7 +504,7 @@ See https://developer.productive.io/#invoices-attributes for params (filter, sor
 ```
 productive.invoices.attributions.getById(id);
 productive.invoices.attributions.get(uriParams);
-productive.invoices.attributions.create(data);
+productive.invoices.attributions.create(uriParams, data);
 productive.invoices.attributions.update(id, data);
 productive.invoices.attributions.remove(id);
 ```
@@ -535,7 +535,7 @@ See https://developer.productive.io/#pages for params (filter, sort, page) and d
 ```
 productive.pages.getById(id);
 productive.pages.get(uriParams);
-productive.pages.create(data);
+productive.pages.create(uriParams, data);
 productive.pages.update(id, data);
 productive.pages.remove(id);
 ```
@@ -546,7 +546,7 @@ See https://developer.productive.io/#payments for params (filter, sort, page) an
 ```
 productive.payments.getById(id);
 productive.payments.get(uriParams);
-productive.payments.create(data);
+productive.payments.create(uriParams, data);
 productive.payments.update(id, data);
 productive.payments.remove(id);
 ```
@@ -555,7 +555,7 @@ See https://developer.productive.io/#people for params (filter, sort, page) and 
 ```
 productive.people.getById(id);
 productive.people.get(uriParams);
-productive.people.create(data);
+productive.people.create(uriParams, data);
 productive.people.update(id, data);
 productive.people.invite(id), data;
 productive.people.resendEmail(id);
@@ -570,7 +570,7 @@ See https://developer.productive.io/#prices for params (filter, sort, page) and 
 ```
 productive.prices.getById(id);
 productive.prices.get(uriParams);
-productive.prices.create(data);
+productive.prices.create(uriParams, data);
 productive.prices.update(id, data);
 productive.prices.remove(id);
 ```
@@ -580,7 +580,7 @@ See https://developer.productive.io/#projects for params (filter, sort, page) an
 ```
 productive.projects.getById(id);
 productive.projects.get(uriParams);
-productive.projects.create(data);
+productive.projects.create(uriParams, data);
 productive.projects.update(id, data);
 productive.projects.archive(id);
 productive.projects.restore(id);
@@ -591,7 +591,7 @@ See https://developer.productive.io/#project-assignments for params (filter, sor
 ```
 productive.projects.assignments.getById(id);
 productive.projects.assignments.get(uriParams);
-productive.projects.assignments.create(data);
+productive.projects.assignments.create(uriParams, data);
 productive.projects.assignments.update(id, data);
 productive.projects.assignments.remove(id);
 ```
@@ -625,7 +625,7 @@ See https://developer.productive.io/#report-categories for params (filter, sort,
 ```
 productive.reports.categories.getById(id);
 productive.reports.categories.get(uriParams);
-productive.reports.categories.create(data);
+productive.reports.categories.create(uriParams, data);
 productive.reports.categories.update(id, data);
 productive.reports.categories.remove(id);
 ```
@@ -635,7 +635,7 @@ See https://developer.productive.io/#salaries for params (filter, sort, page) an
 ```
 productive.salaries.getById(id);
 productive.salaries.get(uriParams);
-productive.salaries.create(data);
+productive.salaries.create(uriParams, data);
 productive.salaries.update(id, data);
 productive.salaries.remove(id);
 ```
@@ -650,7 +650,7 @@ See https://developer.productive.io/#services for params (filter, sort, page) an
 ```
 productive.services.getById(id);
 productive.services.get(uriParams);
-productive.services.create(data);
+productive.services.create(uriParams, data);
 productive.services.update(id, data);
 productive.services.remove(id);
 ```
@@ -660,7 +660,7 @@ See https://developer.productive.io/#service-types for params (filter, sort, pag
 ```
 productive.services.types.getById(id);
 productive.services.types.get(uriParams);
-productive.services.types.create(data);
+productive.services.types.create(uriParams, data);
 productive.services.types.update(id, data);
 productive.services.types.remove(id);
 ```
@@ -684,7 +684,7 @@ See https://developer.productive.io/#tasks for params (filter, sort, page) and d
 ```
 productive.tasks.getById(id);
 productive.tasks.get(uriParams);
-productive.tasks.create(data);
+productive.tasks.create(uriParams, data);
 productive.tasks.update(id, data);
 productive.tasks.archive(id);
 productive.tasks.restore(id);
@@ -694,7 +694,7 @@ See https://developer.productive.io/#time-entries for params (filter, sort, page
 ```
 productive.timeEntries.getById(id);
 productive.timeEntries.get(uriParams);
-productive.timeEntries.create(data);
+productive.timeEntries.create(uriParams, data);
 productive.timeEntries.update(id, data);
 productive.timeEntries.remove(id);
 ```
@@ -704,7 +704,7 @@ See https://developer.productive.io/#todos for params (filter, sort, page) and d
 ```
 productive.todos.getById(id);
 productive.todos.get(uriParams);
-productive.todos.create(data);
+productive.todos.create(uriParams, data);
 productive.todos.update(id, data);
 productive.todos.remove(id);
 ```
@@ -713,7 +713,7 @@ See https://developer.productive.io/#users for params (filter, sort, page) and d
 ```
 productive.users.getById(id); // TODO check 
 productive.users.get(); // Note this returns the user for the API key.  Run a person report to get all the users.
-productive.users.create(data);
+productive.users.create(uriParams, data);
 productive.users.update(id, data);
 productive.users.remove(id);
 ```
