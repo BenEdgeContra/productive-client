@@ -15,12 +15,12 @@ $ npm install --save productive-client
 ## Contents
 - [Instantiate client](#Instantiate-client)
 - [Example (async get)](#example-async-get)
-- [Example (async create)](#Example-async-create)
-- [Example (async update)](#Example-async-update)
-- [Other examples (promise, filtering, sorting,)](#Other-examples)
-- [Response object](#Response-object)
-  - [Relationships](#Relationships)
-- [Entity API's](#Entity-APIs)
+- [Example (async create)](#example-async-create)
+- [Example (async update)](#example-async-update)
+- [Other examples (promise, filtering, sorting,)](#ether-examples)
+- [Response object](#eesponse-object)
+  - [Relationships](#eelationships)
+- [Entity API's](#entity-apis)
 
 
 
@@ -45,6 +45,7 @@ const config = {
 When `debug` is set to `true` the API request will be printed to the console.
 
 ## Example (async get)
+Get an invoice by ID, then go and get the invoice lines.
 ```
 try {
     const invoice = await productive.invoices.getById(1234);
@@ -56,6 +57,7 @@ try {
 ```
 
 ## Example (async create)
+Create a new service.
 ```
 try {
     // Create new service
@@ -93,6 +95,7 @@ try {
 }
 ```
 ## Example (async update)
+Update a task
 ```
 try {
     // Update task
