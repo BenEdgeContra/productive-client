@@ -17,7 +17,7 @@ $ npm install --save productive-client
 - [Example (async get)](#example-async-get)
 - [Example (async create)](#example-async-create)
 - [Example (async update)](#example-async-update)
-- [Other examples (promise, filtering, sorting,)](#ether-examples)
+- [Other examples (promise, filtering, sorting,)](#other-examples)
 - [Response object](#response-object)
   - [Relationships](#relationships)
 - [Entity API's](#entity-apis)
