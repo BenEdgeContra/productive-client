@@ -17,14 +17,14 @@ $ npm install --save productive-client
 const ProductiveClient = require('productive-client');
 
 const productive = new ProductiveClient({
-    organizationId: '1234',
+    organizationId: 'YOUR_ORG_ID',
     token: 'YOUR_API_TOKEN'
 });
 ```
 The full config object contains some additional optional properties:
 ```
 const config = {
-    organizationId: '1234',
+    organizationId: 'YOUR_ORG_ID',
     token: 'YOUR_API_TOKEN',
     debug: false,
     defaultPageSize: 200
@@ -731,3 +731,7 @@ try {
 ## Authors and Contributors
 
 Maintained by [Contra Agency](https://www.contra.agency). Please feel free to submit pull requests to add new functionality.
+
+---
+## License
+[MIT](https://github.com/axios/axios/blob/HEAD/LICENSE)
