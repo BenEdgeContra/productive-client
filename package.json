@@ -1,0 +1,20 @@
+{
+  "name": "productive-client",
+  "keywords": [
+    "Productive",
+    "Productive.io",
+    "Productive.io API"
+  ],
+  "version": "1.0.0",
+  "description": "API wrapper for api.productive.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Contra Agency",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "qs": "^6.9.4"
+  }
+}
