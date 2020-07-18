@@ -7,7 +7,7 @@
   ],
   "homepage": "https://github.com/BenEdgeContra/productive-client",
   "bugs": "https://github.com/BenEdgeContra/productive-client/issues",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "API wrapper for api.productive.io",
   "main": "index.js",
   "scripts": {
