@@ -522,7 +522,7 @@ productive.notifications.undismiss(id);
 
 ### `organization.subscriptions` (no coverage)
 
-### `Organizations` (no coverage)
+### `organizations` (no coverage)
 
 ### `overheads`
 See https://developer.productive.io/#overheads for params (filter, sort, page) and data structure.
@@ -599,26 +599,26 @@ productive.projects.assignments.remove(id);
 ### `reports`
 See https://developer.productive.io/#reports for params (filter, sort, page) and data structure.
 ```
-productive.reports.booking();
-productive.reports.budget();
-productive.reports.company();
-productive.reports.deal();
-productive.reports.expenses();
-productive.reports.financialItem();
-productive.reports.invoice();
-productive.reports.payment();
-productive.reports.person();
-productive.reports.profitability();
-productive.reports.progress();
-productive.reports.salary();
-productive.reports.sales();
-productive.reports.project();
-productive.reports.service();
-productive.reports.task();
-productive.reports.timeEntry();
-productive.reports.time();
-productive.reports.timeCompany();
-productive.reports.timeSheet();
+productive.reports.booking(uriParams);
+productive.reports.budget(uriParams);
+productive.reports.company(uriParams);
+productive.reports.deal(uriParams);
+productive.reports.expenses(uriParams);
+productive.reports.financialItem(uriParams);
+productive.reports.invoice(uriParams);
+productive.reports.payment(uriParams);
+productive.reports.person(uriParams);
+productive.reports.profitability(uriParams);
+productive.reports.progress(uriParams);
+productive.reports.salary(uriParams);
+productive.reports.sales(uriParams);
+productive.reports.project(uriParams);
+productive.reports.service(uriParams);
+productive.reports.task(uriParams);
+productive.reports.timeEntry(uriParams);
+productive.reports.time(uriParams);
+productive.reports.timeCompany(uriParams);
+productive.reports.timeSheet(uriParams);
 ```
 
 ### `reports.categories`
