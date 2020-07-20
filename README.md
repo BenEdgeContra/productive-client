@@ -725,10 +725,11 @@ productive.users.remove(id);
 ## Non wrapped endpoint(s) ##
 It is possible to access the ProductiveClient request method directly, it could be handy if there is not API implementation for an endpoint yet. Using the exposed request method will benefit from the auth and request parsing already in place.
 ```
-productive.get();
-productive.post();
-productive.patch();
-productive.delete();
+productive.apiPATHS; // Object containing API path constants
+productive.get(path, uriParams);
+productive.post(path, data);
+productive.patch(path, data);
+productive.delete(path);
 ```
 ### Example
 ```
