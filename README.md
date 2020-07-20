@@ -17,11 +17,15 @@ $ npm install --save productive-client
 - [Example (async get)](#example-async-get)
 - [Example (async create)](#example-async-create)
 - [Example (async update)](#example-async-update)
-- [Other examples (promise, filtering, sorting,)](#other-examples)
+- [Example (promise)](#promise-based)
+- [Pagination](#pagination)
+- [Filtering](#filtering)
+- [Sorting](#sorting)
 - [Response object](#response-object)
   - [Relationships](#relationships)
-  - [Example - get time entries for a person](#getRelationindex-full-example)
+  - [Example - get time entries (and related project) for a person](#getrelationindex-full-example)
 - [Entity API's](#entity-apis)
+- [Non wrapped API endpoints](#non-wrapped-endpoints)
 
 
 
@@ -133,9 +137,8 @@ try {
     throw err;
 }
 ```
-## Other examples
 
-### Promise based
+## Promise based
 Each API returns a promise so you can use promises if you prefer.
 ```
 const invoice = productive.invoices.getyId(1234)
@@ -146,7 +149,7 @@ const invoice = productive.invoices.getyId(1234)
         console.log(err);
     });
 ```
-### Pagination
+## Pagination
 The Productive API Client returns up to 200 results in each API request (which is the limit set by Productive). This can be reduced as a default or on an individual request level.
 https://developer.productive.io/#header-pagination
 ```
@@ -164,7 +167,7 @@ const deals = await productive.deals.get({
 });
 ```
 
-### Filtering
+## Filtering
 If you would like to add filtration to your query, you can do that by setting the supported filter parameters in the following way:
 ```
 const deals = await productive.deals.get({
@@ -173,7 +176,7 @@ const deals = await productive.deals.get({
 });
 ```
 
-### Sorting
+## Sorting
 To sort query results, you can use sort parameter, passing available sort params for the resource:
 ```
 const deals = await productive.deals.get({
