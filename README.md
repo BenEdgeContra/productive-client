@@ -150,8 +150,7 @@ const invoice = productive.invoices.getyId(1234)
     });
 ```
 ## Pagination
-The Productive API Client returns up to 200 results in each API request (which is the limit set by Productive). This can be reduced as a default or on an individual request level.
-https://developer.productive.io/#header-pagination
+The Productive API Client returns up to 200 results in each API `get` request (which is the limit set by Productive). This can be reduced as a default or on an individual `get` request level. https://developer.productive.io/#header-pagination
 ```
 // Set max to 50 for all requests
 const productive = new ProductiveClient({
@@ -191,13 +190,15 @@ The Productive API returns data in a consistent format. The key properties for a
 ```
 {
     data: [
-        id: "1",
-        type: "someType",
-        attributes: {
-            ...
-        },
-        relationships: {
-            ...
+        {
+            id: "1",
+            type: "someType",
+            attributes: {
+                ...
+            },
+            relationships: {
+                ...
+            }
         }
     ],
     included: [
@@ -234,15 +235,25 @@ To make it simple to access this related data, the Productive API Client exposes
         const entries = []
         for (var i = 0; i < timeEntries.data.length; i++) {
             const item = timeEntries.data[i];
+
+            // Get the related service for the time entry (without a new API request)
             const service = timeEntries.getRelation(item, 'service');
+
+            // Get the related project for the time entry (without a new API request)
             const project = timeEntries.getRelation(item, 'service.deal.project');
+
+            // Calc the minutes
             const minutes = parseInt(item.attributes.time);
+
+            // Add to array
             entries.push ({
                 service,
                 project,
                 minutes
             });
         }
+
+        // Do something with the list
 ```
 
 ### Errors
@@ -741,7 +752,9 @@ const productive = new ProductiveClient({
 });
 
 try {
+    const id = 1234;
     const invoice = await productive.get(`${productive.apiPaths.INVOICES}/${id}`);
+    return invoice
 } catch (err) {
     console.log(err);
     throw err;
