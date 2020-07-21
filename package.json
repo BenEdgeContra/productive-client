@@ -2,8 +2,10 @@
   "name": "productive-client",
   "keywords": [
     "Productive",
+    "Productive API",
     "Productive.io",
     "Productive.io API",
+    "api.productive.io",
     "node"
   ],
   "homepage": "https://github.com/BenEdgeContra/productive-client",
