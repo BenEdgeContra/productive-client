@@ -11,7 +11,7 @@
   "homepage": "https://github.com/BenEdgeContra/productive-client",
   "bugs": "https://github.com/BenEdgeContra/productive-client/issues",
   "version": "1.0.15",
-  "description": "API wrapper for api.productive.io",
+  "description": "Node API client for Productive.io (api.productive.io)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
