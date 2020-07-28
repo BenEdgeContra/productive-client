@@ -18,6 +18,7 @@ module.exports = {
     DOCUMENT_TYPES:         '/document_types',
     EMAILS:                 '/emails',
     EVENTS:                 '/events',
+    ENTITLEMENTS:           '/entitlements',
     EXPENSES:               '/expenses',
     FILTERS:                '/filters',
     HOLIDAYS:               '/holidays',

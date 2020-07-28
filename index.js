@@ -65,8 +65,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Activities.
      *
-     * See https://developer.productive.io/#activities for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {Get} Instance of new GetApi
@@ -77,8 +75,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Attachments.
-     *
-     * See https://developer.productive.io/#attachments for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -91,8 +87,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Boards.
      *
-     * See https://developer.productive.io/#boards for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {BoardApi} Instance of new BoardApi
@@ -103,8 +97,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Bookings.
-     *
-     * See https://developer.productive.io/#bookings for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -117,8 +109,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Comments.
      *
-     * See https://developer.productive.io/#comments for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns  {CommentsApi} Instance of new BookingsApi
@@ -129,8 +119,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Companies.
-     *
-     * See https://developer.productive.io/#companies for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -143,8 +131,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Contact Entries.
      *
-     * See https://developer.productive.io/#contact-entries for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {object} Instance of new CrudApi
@@ -155,8 +141,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Contracts.
-     *
-     * See https://developer.productive.io/#contracts for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -169,8 +153,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Custom fields.
      *
-     * See https://developer.productive.io/#custom-fields for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {object} Instance of new CustomFieldsApi
@@ -181,8 +163,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Dashboards.
-     *
-     * See https://developer.productive.io/#dashboards for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -195,8 +175,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Deals.
      *
-     * See https://developer.productive.io/#deal for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {object} Instance of new DealsApi
@@ -207,8 +185,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Document Types.
-     *
-     * See https://developer.productive.io/#document-types for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -221,8 +197,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Emails.
      *
-     * See https://developer.productive.io/#emails for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {object} Instance of new EmailsApi
@@ -232,9 +206,18 @@ module.exports = class ProductiveClient {
     }
 
     /**
-     * A collection of methods related to Events.
+     * A collection of methods related to Entitlements.
      *
-     * See https://developer.productive.io/#events for params (filter, sort, page) and data structure.
+     * @readonly
+     * @memberof ProductiveClient
+     * @returns {object} Instance of new CrudApi
+     */
+    get entitlements() {
+        return new CrudApi(this, apiPaths.ENTITLEMENTS);
+    }
+
+    /**
+     * A collection of methods related to Events.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -247,8 +230,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Expenses.
      *
-     * See https://developer.productive.io/#expenses for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {object} Instance of new ExpensesApi
@@ -259,8 +240,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Filters.
-     *
-     * See https://developer.productive.io/#filters for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -273,8 +252,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Holidays.
      *
-     * See https://developer.productive.io/#holidays for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {object} Instance of new CrudApi
@@ -285,8 +262,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Imports.
-     *
-     * See https://developer.productive.io/#imports for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -299,8 +274,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Invitations.
      *
-     * See https://developer.productive.io/#invitations for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {object} Instance of new InvitationsApi
@@ -311,8 +284,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Invoices.
-     *
-     * See https://developer.productive.io/#invoices for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -325,8 +296,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Notifications.
      *
-     * See https://developer.productive.io/#notifications for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {object} Instance of new NotificationsApi
@@ -337,8 +306,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Overheads.
-     *
-     * See https://developer.productive.io/#overheads for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -351,8 +318,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Pages.
      *
-     * See https://developer.productive.io/#pages for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {Get} Instance of new CrudApi
@@ -363,8 +328,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Payments.
-     *
-     * See https://developer.productive.io/#payments for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -377,8 +340,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to People.
      *
-     * See https://developer.productive.io/#people for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {Get} Instance of new PeopleApi
@@ -390,8 +351,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Prices.
      *
-     * See https://developer.productive.io/#prices for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {Get} Instance of new CrudApi
@@ -402,8 +361,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Projects.
-     *
-     * See https://developer.productive.io/#projects for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -438,8 +395,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Salaries.
      *
-     * See https://developer.productive.io/#salaries for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {Get} Instance of new ProgressReportsApi
@@ -450,8 +405,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Search.
-     *
-     * See https://developer.productive.io/#search for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -464,8 +417,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Services.
      *
-     * See https://developer.productive.io/#services for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {Get} Instance of new ServicesApi
@@ -476,8 +427,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Subsidiaries.
-     *
-     * See https://developer.productive.io/#subsidiaries for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -490,8 +439,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Tags.
      *
-     * See https://developer.productive.io/#subsidiaries for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {Get} Instance of new GetApi
@@ -502,8 +449,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Tasks.
-     *
-     * See https://developer.productive.io/#tasks for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient
@@ -516,8 +461,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Time Entries.
      *
-     * See https://developer.productive.io/#time-entries for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {Get} Instance of new TimeEntriesApi
@@ -529,8 +472,6 @@ module.exports = class ProductiveClient {
     /**
      * A collection of methods related to Todos.
      *
-     * See https://developer.productive.io/#todos for params (filter, sort, page) and data structure.
-     *
      * @readonly
      * @memberof ProductiveClient
      * @returns {Get} Instance of new TodosApi
@@ -541,8 +482,6 @@ module.exports = class ProductiveClient {
 
     /**
      * A collection of methods related to Users.
-     *
-     * See https://developer.productive.io/#users for params (filter, sort, page) and data structure.
      *
      * @readonly
      * @memberof ProductiveClient

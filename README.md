@@ -13,19 +13,80 @@ $ npm install --save productive-client
 ```
 
 ## Contents
-- [Instantiate client](#instantiate-client)
-- [Example (async get)](#example-async-get)
-- [Example (async create)](#example-async-create)
-- [Example (async update)](#example-async-update)
-- [Example (promise)](#promise-based)
-- [Pagination](#pagination)
-- [Filtering](#filtering)
-- [Sorting](#sorting)
-- [Response object](#response-object)
-  - [Relationships](#relationships)
-  - [Example - get time entries (and related project) for a person](#getrelationindex-full-example)
-- [Entity API's](#entity-apis)
-- [Non wrapped API endpoints](#non-wrapped-endpoints)
+- [Productive.io API Client](#productiveio-api-client)
+  - [Installation](#installation)
+  - [Contents](#contents)
+  - [Instantiate client](#instantiate-client)
+  - [Example (async get)](#example-async-get)
+  - [Example (async create)](#example-async-create)
+  - [Example (async update)](#example-async-update)
+  - [Promise based](#promise-based)
+  - [Pagination](#pagination)
+  - [Filtering](#filtering)
+  - [Sorting](#sorting)
+  - [Response object](#response-object)
+    - [Relationships](#relationships)
+      - [`getRelation(index)` full example](#getrelationindex-full-example)
+    - [Errors](#errors)
+  - [Entity API's](#entity-apis)
+    - [`activities`](#activities)
+    - [`attachments`](#attachments)
+    - [`boards`](#boards)
+    - [`boards.tasksLists`](#boardstaskslists)
+    - [`bookings`](#bookings)
+    - [`comments`](#comments)
+    - [`companies`](#companies)
+    - [`contactEntries`](#contactentries)
+    - [`contracts`](#contracts)
+    - [`customFields`](#customfields)
+    - [`customFields.options`](#customfieldsoptions)
+    - [`dashboards`](#dashboards)
+    - [`dashboards.widgets`](#dashboardswidgets)
+    - [`deals`](#deals)
+    - [`deals.statuses`](#dealsstatuses)
+    - [`deals.lostReasons`](#dealslostreasons)
+    - [`documentTypes`](#documenttypes)
+    - [`emails`](#emails)
+    - [`entitlements`](#entitlements)
+    - [`events`](#events)
+    - [`expenses`](#expenses)
+    - [`filters`](#filters)
+    - [`holidays`](#holidays)
+    - [`imports`](#imports)
+    - [`integrations` (no coverage)](#integrations-no-coverage)
+    - [`invitations`](#invitations)
+    - [`invoices`](#invoices)
+    - [`invoices.lines`](#invoiceslines)
+    - [`invoices.attributions`](#invoicesattributions)
+    - [`notifications`](#notifications)
+    - [`organizations.memberships` (no coverage)](#organizationsmemberships-no-coverage)
+    - [`organization.subscriptions` (no coverage)](#organizationsubscriptions-no-coverage)
+    - [`organizations` (no coverage)](#organizations-no-coverage)
+    - [`overheads`](#overheads)
+    - [`pages`](#pages)
+    - [`passwords` (no coverage)](#passwords-no-coverage)
+    - [`payments`](#payments)
+    - [`people`](#people)
+    - [`prices`](#prices)
+    - [`projects`](#projects)
+    - [`projects.assignments`](#projectsassignments)
+    - [`reports`](#reports)
+    - [`reports.categories`](#reportscategories)
+    - [`salaries`](#salaries)
+    - [`search`](#search)
+    - [`services`](#services)
+    - [`services.types`](#servicestypes)
+    - [`sessions` (no coverage)](#sessions-no-coverage)
+    - [`subsidiaries`](#subsidiaries)
+    - [`tags`](#tags)
+    - [`tasks`](#tasks)
+    - [`timeEntries`](#timeentries)
+    - [`todos`](#todos)
+    - [`users`](#users)
+  - [Non wrapped endpoint(s)](#non-wrapped-endpoints)
+    - [Example](#example)
+  - [Authors and Contributors](#authors-and-contributors)
+  - [License](#license)
 
 
 
@@ -214,7 +275,7 @@ The Productive API returns data in a consistent format. The key properties for a
 }
 ```
 ### Relationships
-A powerful feature of the API is that it returns an object containing the agrogated relationships of the items stored in `data`, meaning that if a number of items in `data` relate to a given entity, then that given entity is only returned once in the response object.
+A powerful feature of the API is that it returns an object containing the aggregated relationships of the items stored in `data`, meaning that if a number of items in `data` relate to a given entity, then that given entity is only returned once in the response object.
 - `data[i].relationships` contains all the types and ids of the relations for `data[i]`
 - `included` aggregates these relations and contains the full data of each relation contained within `data`
 
@@ -257,21 +318,21 @@ To make it simple to access this related data, the Productive API Client exposes
 ```
 
 ### Errors
-Refer to: https://developer.productive.io/#header-errors
+Refer to: hhttps://developer.productive.io/index.html#header-errors
 
 ---
 ## Entity API's
-Each endpoint in Productive's API is wrapped in an API allowing you to opperate on each endpoint in a simple and consistent fashion.
+Each endpoint in Productive's API is wrapped in an API allowing you to operate on each endpoint in a simple and consistent fashion.
 
 ### `activities`
-See https://developer.productive.io/#activities for params (filter, sort, page) and data structure.
+See https://developer.productive.io/activities.html for params (filter, sort, page) and data structure.
 ```
 productive.activities.getById(id);
 productive.activities.get(uriParams);
 
 ```
 ### `attachments`
-See https://developer.productive.io/#attachments for params (filter, sort, page) and data structure.
+See https://developer.productive.io/attachments.html for params (filter, sort, page) and data structure.
 ```
 productive.attachments.getById(id);
 productive.attachments.get(uriParams);
@@ -280,7 +341,7 @@ productive.attachments.update(id, uriParams);
 productive.attachments.remove(id);
 ```
 ### `boards`
-See https://developer.productive.io/#boards for params (filter, sort, page) and data structure.
+See https://developer.productive.io/boards.html for params (filter, sort, page) and data structure.
 ```
 productive.boards.getById(id);
 productive.boards.get(uriParams);
@@ -299,7 +360,7 @@ productive.boards.taskLists.update(id, data);
 productive.boards.taskLists.remove(id);
 ```
 ### `bookings`
-See https://developer.productive.io/#bookings for params (filter, sort, page) and data structure.
+See https://developer.productive.io/bookings.html for params (filter, sort, page) and data structure.
 ```
 productive.bookings.getById(id);
 productive.bookings.get(uriParams);
@@ -310,7 +371,7 @@ productive.bookings.approve(id);
 productive.bookings.unapprove(id);
 ```
 ### `comments`
-See https://developer.productive.io/#comments for params (filter, sort, page) and data structure.
+See https://developer.productive.io/comments.html for params (filter, sort, page) and data structure.
 ```
 productive.comments.getById(id);
 productive.comments.create(uriParams, data);
@@ -320,7 +381,7 @@ productive.comments.pin(id);
 productive.comments.unpin(id);
 ```
 ### `companies`
-See https://developer.productive.io/#companies for params (filter, sort, page) and data structure.
+See https://developer.productive.io/companies.html for params (filter, sort, page) and data structure.
 ```
 productive.companies.getById(id);
 productive.companies.get(uriParams);
@@ -330,7 +391,7 @@ productive.companies.archive(id);
 productive.companies.restore(id);
 ```
 ### `contactEntries`
-See https://developer.productive.io/#contact-entries for params (filter, sort, page) and data structure.
+See https://developer.productive.io/contact_entries.html for params (filter, sort, page) and data structure.
 ```
 productive.contactEntries.getById(id);
 productive.contactEntries.get(uriParams);
@@ -339,7 +400,7 @@ productive.contactEntries.update(id, data);
 productive.contactEntries.remove(id);
 ```
 ### `contracts`
-See https://developer.productive.io/#contracts for params (filter, sort, page) and data structure.
+See https://developer.productive.io/contracts.html for params (filter, sort, page) and data structure.
 ```
 productive.contracts.getById(id);
 productive.contracts.get(uriParams);
@@ -347,7 +408,7 @@ productive.contracts.create(uriParams, data);
 productive.contracts.update(id, data);
 ```
 ### `customFields`
-See https://developer.productive.io/#custom-fields for params (filter, sort, page) and data structure.
+See https://developer.productive.io/custom_fields.html for params (filter, sort, page) and data structure.
 ```
 productive.customFields.getById(id);
 productive.customFields.get(uriParams);
@@ -356,7 +417,7 @@ productive.customFields.update(id, data);
 productive.customFields.archive(id);
 ```
 ### `customFields.options`
-See https://developer.productive.io/#custom-field-options for params (filter, sort, page) and data structure.
+See https://developer.productive.io/custom_field_options.html for params (filter, sort, page) and data structure.
 ```
 productive.customFields.options.getById(id);
 productive.customFields.options.get(uriParams);
@@ -366,7 +427,7 @@ productive.customFields.options.archive(id);
 ```
 
 ### `dashboards`
-See https://developer.productive.io/#dashboards for params (filter, sort, page) and data structure.
+See https://developer.productive.io/dashboards.html for params (filter, sort, page) and data structure.
 ```
 productive.dashboards.getById(id);
 productive.dashboards.get(uriParams);
@@ -376,7 +437,7 @@ productive.dashboards.remove(id);
 ```
 
 ### `dashboards.widgets`
-See https://developer.productive.io/#widgets for params (filter, sort, page) and data structure.
+See https://developer.productive.io/widgets.html for params (filter, sort, page) and data structure.
 ```
 productive.dashboards.widgets.getById(id);
 productive.dashboards.widgets.get(uriParams);
@@ -386,7 +447,7 @@ productive.dashboards.widgets.remove(id);
 ```
 
 ### `deals`
-See https://developer.productive.io/#deals for params (filter, sort, page) and data structure.
+See https://developer.productive.io/deals.html for params (filter, sort, page) and data structure.
 ```
 productive.deals.getById(id);
 productive.deals.get(uriParams);
@@ -396,7 +457,7 @@ productive.deals.remove(id);
 ```
 
 ### `deals.statuses`
-See https://developer.productive.io/#deal-statuses for params (filter, sort, page) and data structure.
+See https://developer.productive.io/deal_statuses.html for params (filter, sort, page) and data structure.
 ```
 productive.deals.statuses.getById(id);
 productive.deals.statuses.get(uriParams);
@@ -405,7 +466,7 @@ productive.deals.statuses.update(id, data);
 productive.deals.statuses.remove(id);
 ```
 ### `deals.lostReasons`
-See https://developer.productive.io/#lost-reasons for params (filter, sort, page) and data structure.
+See https://developer.productive.io/lost_reasons.html for params (filter, sort, page) and data structure.
 ```
 productive.deals.lostReasons.getById(id);
 productive.deals.lostReasons.get(uriParams);
@@ -415,7 +476,7 @@ productive.deals.lostReasons.remove(id);
 ```
 
 ### `documentTypes`
-See https://developer.productive.io/#document-types for params (filter, sort, page) and data structure.
+See https://developer.productive.io/document_types.html for params (filter, sort, page) and data structure.
 ```
 productive.documentTypes.getById(id);
 productive.documentTypes.get(uriParams);
@@ -425,7 +486,7 @@ productive.documentTypes.remove(id);
 
 ```
 ### `emails`
-See https://developer.productive.io/#emails for params (filter, sort, page) and data structure.
+See https://developer.productive.io/emails.html for params (filter, sort, page) and data structure.
 ```
 productive.emails.getById(id);
 productive.emails.get(uriParams);
@@ -434,8 +495,17 @@ productive.emails.dismiss(id);
 productive.emails.remove(id);
 
 ```
+### `entitlements`
+See https://developer.productive.io/entitlements.html for params (filter, sort, page) and data structure.
+```
+productive.entitlements.getById(id);
+productive.entitlements.get(uriParams);
+productive.entitlements.create(uriParams, data);
+productive.entitlements.update(id, data);
+productive.entitlements.remove(id);
+```
 ### `events`
-See https://developer.productive.io/#events for params (filter, sort, page) and data structure.
+See https://developer.productive.io/events.html for params (filter, sort, page) and data structure.
 ```
 productive.events.getById(id);
 productive.events.get(uriParams);
@@ -444,7 +514,7 @@ productive.events.update(id, data);
 productive.events.remove(id);
 ```
 ### `expenses`
-See https://developer.productive.io/#expenses for params (filter, sort, page) and data structure.
+See https://developer.productive.io/expenses.html for params (filter, sort, page) and data structure.
 ```
 productive.expenses.getById(id);
 productive.expenses.get(uriParams);
@@ -456,7 +526,7 @@ productive.expenses.unapprove(id);
 ```
 
 ### `filters`
-See https://developer.productive.io/#filters for params (filter, sort, page) and data structure.
+See https://developer.productive.io/filters.html for params (filter, sort, page) and data structure.
 ```
 productive.filters.getById(id);
 productive.filters.get(uriParams);
@@ -466,7 +536,7 @@ productive.filters.remove(id);
 ```
 
 ### `holidays`
-See https://developer.productive.io/#holidays for params (filter, sort, page) and data structure.
+See https://developer.productive.io/holidays.html for params (filter, sort, page) and data structure.
 ```
 productive.holidays.getById(id);
 productive.holidays.get(uriParams);
@@ -475,7 +545,7 @@ productive.holidays.update(id, data);
 productive.holidays.remove(id);
 ```
 ### `imports`
-See https://developer.productive.io/#imports for params (filter, sort, page) and data structure.
+See https://developer.productive.io/imports.html for params (filter, sort, page) and data structure.
 ```
 productive.imports.getById(id);
 productive.imports.get(uriParams);
@@ -487,14 +557,14 @@ productive.imports.revert(id);
 ### `integrations` (no coverage)
 
 ### `invitations`
-See https://developer.productive.io/#invitations for params (filter, sort, page) and data structure.
+See https://developer.productive.io/invitations.html for params (filter, sort, page) and data structure.
 ```
 productive.invitations.getById(id);
 productive.invitations.create(uriParams, data);
 productive.invitations.update(id, data);
 ```
 ### `invoices`
-See https://developer.productive.io/#invoices for params (filter, sort, page) and data structure.
+See https://developer.productive.io/invoices.html for params (filter, sort, page) and data structure.
 ```
 productive.invoices.getById(id);
 productive.invoices.get(uriParams);
@@ -505,7 +575,7 @@ productive.invoices.send(id, data);
 ```
 
 ### `invoices.lines`
-See https://developer.productive.io/#invoices-lines for params (filter, sort, page) and data structure.
+See https://developer.productive.io/line_items.html for params (filter, sort, page) and data structure.
 ```
 productive.invoices.lines.getById(id);
 productive.invoices.lines.get(uriParams);
@@ -515,7 +585,7 @@ productive.invoices.lines.remove(id);
 ```
 
 ### `invoices.attributions`
-See https://developer.productive.io/#invoices-attributes for params (filter, sort, page) and data structure.
+See https://developer.productive.io/invoice_attributions.html for params (filter, sort, page) and data structure.
 ```
 productive.invoices.attributions.getById(id);
 productive.invoices.attributions.get(uriParams);
@@ -524,7 +594,7 @@ productive.invoices.attributions.update(id, data);
 productive.invoices.attributions.remove(id);
 ```
 ### `notifications`
-See https://developer.productive.io/#notifications for params (filter, sort, page) and data structure.
+See https://developer.productive.io/notifications.html for params (filter, sort, page) and data structure.
 ```
 productive.notifications.getById(id);
 productive.notifications.show(id);
@@ -539,14 +609,14 @@ productive.notifications.undismiss(id);
 ### `organizations` (no coverage)
 
 ### `overheads`
-See https://developer.productive.io/#overheads for params (filter, sort, page) and data structure.
+See https://developer.productive.io/overheads.html for params (filter, sort, page) and data structure.
 ```
 productive.overheads.getById(id);
 productive.overheads.get(uriParams);
 ```
 
 ### `pages`
-See https://developer.productive.io/#pages for params (filter, sort, page) and data structure.
+See https://developer.productive.io/pages.html for params (filter, sort, page) and data structure.
 ```
 productive.pages.getById(id);
 productive.pages.get(uriParams);
@@ -557,7 +627,7 @@ productive.pages.remove(id);
 ### `passwords` (no coverage)
 
 ### `payments`
-See https://developer.productive.io/#payments for params (filter, sort, page) and data structure.
+See https://developer.productive.io/payments.html for params (filter, sort, page) and data structure.
 ```
 productive.payments.getById(id);
 productive.payments.get(uriParams);
@@ -566,7 +636,7 @@ productive.payments.update(id, data);
 productive.payments.remove(id);
 ```
 ### `people`
-See https://developer.productive.io/#people for params (filter, sort, page) and data structure.
+See https://developer.productive.io/people.html for params (filter, sort, page) and data structure.
 ```
 productive.people.getById(id);
 productive.people.get(uriParams);
@@ -581,7 +651,7 @@ productive.people.restore(id);
 ```
 
 ### `prices`
-See https://developer.productive.io/#prices for params (filter, sort, page) and data structure.
+See https://developer.productive.io/prices.html for params (filter, sort, page) and data structure.
 ```
 productive.prices.getById(id);
 productive.prices.get(uriParams);
@@ -591,7 +661,7 @@ productive.prices.remove(id);
 ```
 
 ### `projects`
-See https://developer.productive.io/#projects for params (filter, sort, page) and data structure.
+See https://developer.productive.io/projects.html for params (filter, sort, page) and data structure.
 ```
 productive.projects.getById(id);
 productive.projects.get(uriParams);
@@ -602,7 +672,7 @@ productive.projects.restore(id);
 productive.projects.copy(id, data);
 ```
 ### `projects.assignments`
-See https://developer.productive.io/#project-assignments for params (filter, sort, page) and data structure.
+See https://developer.productive.io/project_assignments.html for params (filter, sort, page) and data structure.
 ```
 productive.projects.assignments.getById(id);
 productive.projects.assignments.get(uriParams);
@@ -611,7 +681,7 @@ productive.projects.assignments.update(id, data);
 productive.projects.assignments.remove(id);
 ```
 ### `reports`
-See https://developer.productive.io/#reports for params (filter, sort, page) and data structure.
+See https://developer.productive.io/reports.html for params (filter, sort, page) and data structure.
 ```
 productive.reports.booking(uriParams);
 productive.reports.budget(uriParams);
@@ -636,7 +706,7 @@ productive.reports.timeSheet(uriParams);
 ```
 
 ### `reports.categories`
-See https://developer.productive.io/#report-categories for params (filter, sort, page) and data structure.
+See https://developer.productive.io/report_categories.html for params (filter, sort, page) and data structure.
 ```
 productive.reports.categories.getById(id);
 productive.reports.categories.get(uriParams);
@@ -646,7 +716,7 @@ productive.reports.categories.remove(id);
 ```
 
 ### `salaries`
-See https://developer.productive.io/#salaries for params (filter, sort, page) and data structure.
+See https://developer.productive.io/salaries.html for params (filter, sort, page) and data structure.
 ```
 productive.salaries.getById(id);
 productive.salaries.get(uriParams);
@@ -655,13 +725,13 @@ productive.salaries.update(id, data);
 productive.salaries.remove(id);
 ```
 ### `search`
-See https://developer.productive.io/#search for params (filter, sort, page) and data structure.
+See https://developer.productive.io/search.html for params (filter, sort, page) and data structure.
 ```
 productive.search.get(uriParams);
 ```
 
 ### `services`
-See https://developer.productive.io/#services for params (filter, sort, page) and data structure.
+See https://developer.productive.io/services.html for params (filter, sort, page) and data structure.
 ```
 productive.services.getById(id);
 productive.services.get(uriParams);
@@ -671,7 +741,7 @@ productive.services.remove(id);
 ```
 
 ### `services.types`
-See https://developer.productive.io/#service-types for params (filter, sort, page) and data structure.
+See https://developer.productive.io/service_types.html for params (filter, sort, page) and data structure.
 ```
 productive.services.types.getById(id);
 productive.services.types.get(uriParams);
@@ -682,20 +752,20 @@ productive.services.types.remove(id);
 ### `sessions` (no coverage)
 
 ### `subsidiaries`
-See https://developer.productive.io/#subsidiaries for params (filter, sort, page) and data structure.
+See https://developer.productive.io/subsidiaries.html for params (filter, sort, page) and data structure.
 ```
 productive.subsidiaries.get(uriParams);
 ```
 
 ### `tags`
-See https://developer.productive.io/#tags for params (filter, sort, page) and data structure.
+See https://developer.productive.io/tags.html for params (filter, sort, page) and data structure.
 ```
 productive.tags.getById(id);
 productive.tags.get(uriParams);
 ```
 
 ### `tasks`
-See https://developer.productive.io/#tasks for params (filter, sort, page) and data structure.
+See https://developer.productive.io/tasks.html for params (filter, sort, page) and data structure.
 ```
 productive.tasks.getById(id);
 productive.tasks.get(uriParams);
@@ -705,7 +775,7 @@ productive.tasks.archive(id);
 productive.tasks.restore(id);
 ```
 ### `timeEntries`
-See https://developer.productive.io/#time-entries for params (filter, sort, page) and data structure.
+See https://developer.productive.io/time_entries.html for params (filter, sort, page) and data structure.
 ```
 productive.timeEntries.getById(id);
 productive.timeEntries.get(uriParams);
@@ -715,7 +785,7 @@ productive.timeEntries.remove(id);
 ```
 
 ### `todos`
-See https://developer.productive.io/#todos for params (filter, sort, page) and data structure.
+See https://developer.productive.io/todos.html for params (filter, sort, page) and data structure.
 ```
 productive.todos.getById(id);
 productive.todos.get(uriParams);
@@ -724,7 +794,7 @@ productive.todos.update(id, data);
 productive.todos.remove(id);
 ```
 ### `users`
-See https://developer.productive.io/#users for params (filter, sort, page) and data structure.
+See https://developer.productive.io/users.html for params (filter, sort, page) and data structure.
 ```
 productive.users.getById(id); // TODO check 
 productive.users.get(); // Note this returns the user for the API key.  Run a person report to get all the users.
