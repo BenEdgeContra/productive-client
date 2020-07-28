@@ -10,7 +10,7 @@
   ],
   "homepage": "https://github.com/BenEdgeContra/productive-client",
   "bugs": "https://github.com/BenEdgeContra/productive-client/issues",
-  "version": "1.0.15",
+  "version": "1.1.0",
   "description": "Node API client for Productive.io (api.productive.io)",
   "main": "index.js",
   "scripts": {
